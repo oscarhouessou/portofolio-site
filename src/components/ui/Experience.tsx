@@ -16,13 +16,13 @@ type Experiences = {
 };
 
 export function Experience() {
-  const [activeTab, setActiveTab] = useState<'gozem' | 'lha' | 'internship'>('gozem');
+  const [activeTab, setActiveTab] = useState<'gozem' | 'lha' | 'gozem-internship' | 'internship'>('gozem');
 
   const experiences: Experiences = {
     gozem: {
       company: 'Gozem',
       role: 'Data Scientist - Lead Financing Squad',
-      period: 'Mars 2023 - Présent',
+      period: 'Octobre 2023 - Présent',
       location: 'Cotonou, Bénin',
       responsibilities: [
         'Direction de projets analytiques majeurs pour la squad Financing',
@@ -31,6 +31,20 @@ export function Experience() {
         'Implémentation de systèmes automatisés de vérification de marque',
         'Analyse géospatiale des marchés et optimisation des routes',
         'Développement de POC pour l\'inspection automatisée des véhicules'
+      ]
+    },
+    'gozem-internship': {
+      company: 'Gozem',
+      role: 'ML Engineer Intern',
+      period: 'Mars 2023 - Septembre 2023',
+      location: 'Cotonou, Bénin',
+      responsibilities: [
+        'Conception et développement d\'un système de scoring pour évaluer l\'éligibilité des champions',
+        'Création d\'un tableau de bord interactif Streamlit pour la visualisation des résultats du modèle',
+        'Implémentation de techniques d\'interprétabilité des modèles pour une prise de décision transparente',
+        'Analyse géospatiale des points d\'intérêt (pharmacies, centres commerciaux) autour des champions',
+        'Développement de KPIs cruciaux pour l\'analyse des performances des champions',
+        'Création d\'un système de détection et d\'extraction des numéros de châssis des cartes grises'
       ]
     },
     lha: {
@@ -74,7 +88,17 @@ export function Experience() {
                 : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
             }`}
           >
-            Gozem
+            Data Scientist Gozem
+          </button>
+          <button
+            onClick={() => setActiveTab('gozem-internship')}
+            className={`px-6 py-2 rounded-full transition-all ${
+              activeTab === 'gozem-internship'
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
+            }`}
+          >
+            Stage Gozem
           </button>
           <button
             onClick={() => setActiveTab('lha')}
@@ -94,7 +118,7 @@ export function Experience() {
                 : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700'
             }`}
           >
-            Stage
+            Stage LHA
           </button>
         </div>
 

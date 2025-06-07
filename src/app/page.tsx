@@ -21,13 +21,12 @@ export default function Home() {
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             {/* Profile Image */}
             <div className="relative mx-auto mb-8">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 opacity-10 blur-2xl rounded-full" />
               <div className="relative rounded-full h-32 w-32 md:h-40 md:w-40 mx-auto overflow-hidden ring-4 ring-white dark:ring-gray-800 shadow-xl">
                 <Image
                   src="/Photo_Professionnelle.jpg"
                   alt="Oscar Houessou"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_20%] transform translate-y-8"
                   priority
                   sizes="(max-width: 768px) 128px, 160px"
                 />
@@ -41,14 +40,15 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300 mb-6">
               Je transforme les données en décisions stratégiques
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-              Ingénieur en Mathématiques Appliquées et Data Scientist passionné par le Machine Learning et l'IA, 
-              avec un focus clair sur l'impact business. Lead Data de la squad Financing chez Gozem, développant 
-              des produits data innovants qui transforment la prise de décision stratégique.
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
+              Ingénieur en Mathématiques Appliquées, je suis Data Scientist chez Gozem, où je développe des produits analytiques innovants qui transforment la prise de décision stratégique.  De la modélisation à la mise en production, je conçois des solutions intelligentes qui permettent aux équipes de mieux décider.
             </p>
+            {/* <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+              De la modélisation à la mise en production, je conçois des solutions intelligentes qui permettent aux équipes de mieux décider, plus vite.
+            </p> */}
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-16"> {/* Ajout de mb-16 pour l'espace */}
               <a
                 href="#contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold shadow-lg hover:from-blue-700 hover:to-purple-700 transition-colors duration-200"
@@ -63,9 +63,17 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Scroll Indicator */}
+            {/* Scroll Indicator - Maintenant sous les boutons */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-              <svg className="w-6 h-6 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <svg 
+                className="w-6 h-6 text-gray-400" 
+                fill="none" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth="2" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
                 <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
               </svg>
             </div>

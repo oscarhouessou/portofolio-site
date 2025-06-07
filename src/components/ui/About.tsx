@@ -1,4 +1,5 @@
 import { AnimatedSection } from "./AnimatedSection";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -6,22 +7,35 @@ export function About() {
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
         À Propos
       </h2>
-      <div className="space-y-6 text-gray-700 dark:text-gray-300">
-        <p className="text-lg leading-relaxed">
-          Ingénieur en mathématiques appliquées et modélisation, avec une forte spécialisation en machine learning
-          et intelligence artificielle. Fort de 3 ans d'expérience en tant que data scientist au Bénin, j'ai dirigé
-          des projets analytiques d'envergure chez Gozem.
-        </p>
-        <p className="text-lg leading-relaxed">
-          En tant que lead data de la squad Financing, j'ai conçu des modèles de scoring sophistiqués,
-          automatisé des processus financiers via FastAPI, et déployé des dashboards stratégiques qui ont
-          significativement impacté la prise de décision.
-        </p>
-        <p className="text-lg leading-relaxed">
-          Mon profil hybride combine expertise industrielle et recherche académique. J'ai publié deux articles
-          scientifiques sur la modélisation hydrologique utilisant des réseaux de neurones récurrents (LSTM/GRU),
-          démontrant ma capacité à appliquer des techniques avancées de deep learning à des problèmes concrets.
-        </p>
+      <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="w-full md:w-1/4 flex justify-start -ml-8 -mt-8">
+          <div className="relative w-56 h-56">
+            <Image
+              src="/Photo_Professionnelle.jpg"
+              alt="Photo Professionnelle"
+              fill
+              className="rounded-full object-cover object-[center_5%] transform translate-y-32"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
+        </div>
+        <div className="w-full md:w-2/3 space-y-6 text-gray-700 dark:text-gray-300">
+          <p className="text-lg leading-relaxed">
+            Ingénieur en mathématiques appliquées et modélisation, avec une forte spécialisation en machine learning
+            et intelligence artificielle. Fort de 3 ans d'expérience en tant que data scientist au Bénin, j'ai dirigé
+            des projets analytiques d'envergure chez Gozem.
+          </p>
+          <p className="text-lg leading-relaxed">
+            En tant que lead data de la squad Financing, j'ai conçu des modèles de scoring sophistiqués,
+            automatisé des processus financiers via FastAPI, et déployé des dashboards stratégiques qui ont
+            significativement impacté la prise de décision.
+          </p>
+          <p className="text-lg leading-relaxed">
+            Mon profil hybride combine expertise industrielle et recherche académique. J'ai publié deux articles
+            scientifiques sur la modélisation hydrologique utilisant des réseaux de neurones récurrents (LSTM/GRU),
+            démontrant ma capacité à appliquer des techniques avancées de deep learning à des problèmes concrets.
+          </p>
+        </div>
       </div>
 
       <div className="flex justify-center gap-8 mt-12">
