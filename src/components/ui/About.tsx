@@ -26,7 +26,7 @@ export function About() {
             des projets analytiques d'envergure chez Gozem.
           </p>
           <p className="text-lg leading-relaxed">
-            En tant que lead data de la squad Financing, j'ai conçu des modèles de scoring sophistiqués,
+            En tant que data scientist, j'ai conçu des modèles de scoring sophistiqués,
             automatisé des processus financiers via FastAPI, et déployé des dashboards stratégiques qui ont
             significativement impacté la prise de décision.
           </p>
